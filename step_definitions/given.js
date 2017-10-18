@@ -20,12 +20,17 @@ import isEnabled from '../support/check/isEnabled';
 import isVisible from '../support/check/isVisible';
 import openWebsite from '../support/action/openWebsite';
 import resizeScreenSize from '../support/action/resizeScreenSize';
-
+import getDataToAnalyze from '../support/calculate/getDataToAnalyze';
 
 defineSupportCode(({ Given }) => {
     Given(
         /^I open the (url|site) "([^"]*)?"$/,
         openWebsite
+    );
+
+    Given(
+        /^Collect the data to analyze "([^"]*)?" week$/,
+        getDataToAnalyze
     );
 
     Given(

@@ -1,6 +1,6 @@
 exports.config = {
     specs: [
-        './src/features/**/*.feature',
+        './features/**/*.feature',
     ],
     exclude: [
         // 'path/to/excluded/files'
@@ -10,7 +10,12 @@ exports.config = {
 
     capabilities: [{
         maxInstances: 5,
-        browserName: 'chrome',
+        //browserName: "internet explorer",
+        browserName: "chrome",
+        //acceptSslCerts: true,
+        chromeOptions: {
+            args: ["--start-maximized"]
+        }
     }],
 
     sync: true,
@@ -21,7 +26,7 @@ exports.config = {
 
     screenshotPath: './errorShots/',
 
-    baseUrl: 'http://localhost:8080',
+    baseUrl: 'http://localhost:4444',
 
     waitforTimeout: 10000,
 
@@ -58,9 +63,9 @@ exports.config = {
         profile: [],
 
         require: [
-            './src/step_definitions/given.js',
-            './src/step_definitions/then.js',
-            './src/step_definitions/when.js',
+            './step_definitions/given.js',
+            './step_definitions/then.js',
+            './step_definitions/when.js',
         ],
 
         snippetSyntax: undefined,

@@ -11,5 +11,7 @@ Feature:
 
 
     Scenario: This is the first concrete scenario
-        Given I open the url ""
-        And I pause for 5000ms
+        Given I open the url "https://bet.szerencsejatek.hu/cmsfiles/otos.html"
+        And I pause for 1000ms
+        And Collect the data to analyze "50" week
+        And I pause for 1000ms
