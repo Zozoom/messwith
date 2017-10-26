@@ -21,6 +21,7 @@ import isVisible from '../support/check/isVisible';
 import openWebsite from '../support/action/openWebsite';
 import resizeScreenSize from '../support/action/resizeScreenSize';
 import getDataToAnalyze from '../support/calculate/getDataToAnalyze';
+import guessTheBest from '../support/calculate/guessTheBest';
 
 defineSupportCode(({ Given }) => {
     Given(
@@ -32,6 +33,12 @@ defineSupportCode(({ Given }) => {
         /^Collect the data to analyze "([^"]*)?" week$/,
         getDataToAnalyze
     );
+
+    Given(
+        /^Guess the lotto number "([^"]*)?" times$/,
+        guessTheBest
+    );
+
 
     Given(
         /^the element "([^"]*)?" is( not)* visible$/,
